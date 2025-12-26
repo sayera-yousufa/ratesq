@@ -1,68 +1,74 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import GeometricShapes from "./GeometricShapes";
 
 const Hero = () => {
   return (
-    <section className="relative pt-28 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-card via-card to-muted/30 overflow-hidden">
-      {/* Geometric background elements */}
-      <GeometricShapes variant="hero" />
-      
-      {/* Subtle grid overlay */}
-      <div className="absolute inset-0 geometric-grid opacity-30" />
+    <section className="relative min-h-[90vh] flex items-center bg-navy-deep overflow-hidden">
+      {/* Abstract gradient shapes */}
+      <div className="absolute inset-0">
+        {/* Large gradient orbs */}
+        <div className="absolute top-1/4 -right-20 w-[700px] h-[700px] rounded-full bg-gradient-to-br from-accent/20 to-teal-soft/10 blur-3xl" />
+        <div className="absolute -bottom-40 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-teal-soft/15 to-accent/5 blur-3xl" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-navy-medium/50 blur-3xl" />
+        
+        {/* Subtle geometric lines */}
+        <div className="absolute top-20 right-1/4 w-px h-40 bg-gradient-to-b from-transparent via-cream/10 to-transparent" />
+        <div className="absolute bottom-32 left-1/3 w-32 h-px bg-gradient-to-r from-transparent via-cream/10 to-transparent" />
+      </div>
 
-      <div className="container max-w-7xl mx-auto px-6 lg:px-8 relative">
-        <div className="max-w-4xl">
-          {/* Eyebrow with premium styling */}
+      {/* Grid overlay */}
+      <div className="absolute inset-0 geometric-grid opacity-[0.03]" />
+
+      <div className="container max-w-7xl mx-auto px-6 lg:px-8 relative pt-20">
+        <div className="max-w-5xl">
+          {/* Eyebrow */}
           <div className="mb-10">
-            <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest text-accent uppercase">
-              <span className="w-8 h-px bg-accent" />
+            <span className="inline-flex items-center gap-4 text-sm font-medium tracking-[0.25em] text-accent uppercase">
+              <span className="w-12 h-px bg-accent" />
               Mortgage Marketplace
             </span>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-foreground mb-8 font-display">
-            Clarity in every rate.
+          {/* Main headline - CAPS, bold */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-cream mb-10 font-display uppercase leading-[0.95]">
+            Find Clarity
             <br />
-            <span className="bg-gradient-to-r from-muted-foreground to-muted-foreground/70 bg-clip-text text-transparent">
-              Confidence in every choice.
+            <span className="bg-gradient-to-r from-accent via-teal-soft to-accent bg-clip-text text-transparent">
+              In Mortgage Rates
             </span>
           </h1>
 
-          {/* Geometric accent divider */}
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-3 h-3 rotate-45 bg-accent" />
-            <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-accent/20" />
-          </div>
+          {/* Thin divider */}
+          <div className="w-24 h-px bg-cream/20 mb-10" />
 
           {/* Subheadline */}
-          <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl mb-12">
-            Make informed mortgage decisions with transparent rate information and direct access to licensed professionals you can trust.
+          <p className="text-xl lg:text-2xl text-cream/60 leading-relaxed max-w-2xl mb-14 font-light">
+            Access transparent rate information and connect directly with licensed mortgage professionals.
           </p>
 
-          {/* CTA */}
-          <Button variant="navy" size="xl" className="group text-lg h-16 px-10 shadow-xl hover:shadow-2xl transition-all duration-300">
+          {/* CTA - Premium solid button */}
+          <Button 
+            variant="accent" 
+            size="xl" 
+            className="group text-base font-semibold tracking-wider uppercase h-16 px-12 shadow-[0_8px_30px_hsl(var(--accent)/0.3)] hover:shadow-[0_12px_40px_hsl(var(--accent)/0.4)] transition-all duration-300"
+          >
             Explore Rates
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-1" />
           </Button>
 
-          {/* Trust indicators with premium styling */}
-          <div className="mt-16 pt-10 border-t border-border/50">
-            <div className="flex flex-wrap items-center gap-x-12 gap-y-5 text-base text-muted-foreground">
-              {["Licensed professionals only", "NMLS verified", "Compliance-first"].map((item, index) => (
-                <div key={index} className="flex items-center gap-3 group">
-                  <div className="w-2 h-2 rotate-45 bg-accent group-hover:scale-125 transition-transform" />
-                  <span className="font-medium">{item}</span>
+          {/* Trust indicators */}
+          <div className="mt-20 pt-10 border-t border-cream/10">
+            <div className="flex flex-wrap items-center gap-x-16 gap-y-6 text-sm text-cream/40 tracking-wide uppercase">
+              {["Licensed Professionals", "NMLS Verified", "Compliance First"].map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
