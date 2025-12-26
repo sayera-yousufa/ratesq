@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhatWeHelp from "@/components/WhatWeHelp";
 import HowItWorks from "@/components/HowItWorks";
+import WhyRatesQ from "@/components/WhyRatesQ";
 import Features from "@/components/Features";
 import ForProfessionals from "@/components/ForProfessionals";
 import Compliance from "@/components/Compliance";
@@ -16,6 +17,7 @@ const Index = () => {
         <Hero />
         <WhatWeHelp />
         <HowItWorks />
+        <WhyRatesQ />
         <Features />
         <ForProfessionals />
         <Compliance />
