@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import ratesqLogo from "@/assets/ratesq-logo.png";
 
 const Header = () => {
   return (
@@ -6,10 +7,12 @@ const Header = () => {
       <div className="container max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <span className="text-2xl lg:text-[1.75rem] font-bold tracking-tight text-foreground font-display">
-              RatesQ
-            </span>
+          <a href="/" className="flex items-center">
+            <img 
+              src={ratesqLogo} 
+              alt="RatesQ" 
+              className="h-9 lg:h-10 w-auto"
+            />
           </a>
 
           {/* Navigation */}
