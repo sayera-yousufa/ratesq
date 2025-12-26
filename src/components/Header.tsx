@@ -7,12 +7,15 @@ const Header = () => {
       <div className="container max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center gap-2">
             <img 
               src={ratesqLogo} 
               alt="RatesQ" 
               className="h-9 lg:h-10 w-auto"
             />
+            <span className="text-xl lg:text-2xl font-bold tracking-tight text-foreground font-display">
+              RATESQ
+            </span>
           </a>
 
           {/* Navigation */}
