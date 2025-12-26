@@ -24,12 +24,12 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-12 lg:py-16 bg-muted/50">
+    <section id="how-it-works" className="py-16 lg:py-20 bg-muted/50">
       <div className="container max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Image */}
           <div className="order-2 lg:order-1">
-            <div className="relative rounded-xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-foreground/5">
               <img 
                 src={dataVisual} 
                 alt="Data visualization" 
@@ -41,25 +41,25 @@ const HowItWorks = () => {
 
           {/* Right: Content */}
           <div className="order-1 lg:order-2">
-            <p className="text-sm font-medium tracking-wide text-accent uppercase mb-3">
+            <p className="text-sm font-semibold tracking-widest text-accent uppercase mb-4">
               How It Works
             </p>
-            <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-foreground mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-10 font-display">
               A straightforward approach to mortgage exploration
             </h2>
 
             {/* Steps */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               {steps.map((step) => (
-                <div key={step.number} className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent">
-                    <step.icon className="w-5 h-5" strokeWidth={1.5} />
+                <div key={step.number} className="flex gap-5">
+                  <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-accent/10 text-accent">
+                    <step.icon className="w-6 h-6" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">
+                    <h3 className="text-xl font-semibold text-foreground mb-2 font-display">
                       {step.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-base text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
                   </div>

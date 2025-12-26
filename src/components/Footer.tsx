@@ -23,27 +23,27 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-navy-deep text-primary-foreground">
+    <footer className="bg-[hsl(222,57%,12%)] text-[hsl(40,33%,98%)]">
       <div className="container max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main footer */}
-        <div className="py-12 lg:py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="py-14 lg:py-20 grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1 space-y-4">
-            <span className="text-xl font-semibold tracking-tight">RatesQ</span>
-            <p className="text-sm text-primary-foreground/60 max-w-xs">
+          <div className="col-span-2 md:col-span-1 space-y-5">
+            <span className="text-2xl font-bold tracking-tight font-display">RatesQ</span>
+            <p className="text-base text-[hsl(40,33%,98%)]/60 max-w-xs leading-relaxed">
               A transparent marketplace for mortgage exploration.
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Company</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base font-semibold mb-5 font-display">Company</h4>
+            <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <a 
                     href={link.href}
-                    className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                    className="text-base text-[hsl(40,33%,98%)]/60 hover:text-[hsl(40,33%,98%)] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -53,13 +53,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base font-semibold mb-5 font-display">Resources</h4>
+            <ul className="space-y-4">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
                   <a 
                     href={link.href}
-                    className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                    className="text-base text-[hsl(40,33%,98%)]/60 hover:text-[hsl(40,33%,98%)] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -69,13 +69,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4">Legal</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base font-semibold mb-5 font-display">Legal</h4>
+            <ul className="space-y-4">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
                   <a 
                     href={link.href}
-                    className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                    className="text-base text-[hsl(40,33%,98%)]/60 hover:text-[hsl(40,33%,98%)] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -86,12 +86,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="py-6 border-t border-primary-foreground/10">
+        <div className="py-8 border-t border-[hsl(40,33%,98%)]/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/60">
+            <p className="text-base text-[hsl(40,33%,98%)]/60">
               © {currentYear} RatesQ. All rights reserved.
             </p>
-            <p className="text-xs text-primary-foreground/40 max-w-lg text-center md:text-right">
+            <p className="text-sm text-[hsl(40,33%,98%)]/40 max-w-xl text-center md:text-right">
               RatesQ is not a lender and does not offer mortgage loans. All lending services are provided by licensed third-party institutions.
             </p>
           </div>
