@@ -20,32 +20,32 @@ const items = [
 
 const WhatWeHelp = () => {
   return (
-    <section className="py-12 lg:py-16 bg-card border-t border-border">
+    <section className="py-16 lg:py-20 bg-card border-t border-border">
       <div className="container max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header */}
-        <div className="mb-10">
-          <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-foreground">
+        <div className="mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground font-display">
             What RatesQ Helps With
           </h2>
         </div>
 
         {/* Three columns */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
           {items.map((item, index) => (
-            <div key={index} className="space-y-4">
+            <div key={index} className="space-y-5">
               {/* Icon */}
-              <div className="w-10 h-10 flex items-center justify-center">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/10">
                 <item.icon 
-                  className="w-6 h-6 text-accent" 
+                  className="w-7 h-7 text-accent" 
                   strokeWidth={1.5} 
                 />
               </div>
 
               {/* Content */}
-              <h3 className="text-lg font-medium text-foreground leading-snug">
+              <h3 className="text-xl lg:text-2xl font-semibold text-foreground leading-snug font-display">
                 {item.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed">
                 {item.description}
               </p>
             </div>

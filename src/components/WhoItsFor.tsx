@@ -21,12 +21,12 @@ const audiences = [
 
 const WhoItsFor = () => {
   return (
-    <section className="py-12 lg:py-16 bg-card">
+    <section id="for-professionals" className="py-16 lg:py-20 bg-card">
       <div className="container max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
           {/* Left: Image */}
           <div className="lg:col-span-2">
-            <div className="rounded-xl overflow-hidden">
+            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-foreground/5">
               <img 
                 src={professionalImage} 
                 alt="Professional meeting" 
@@ -38,8 +38,8 @@ const WhoItsFor = () => {
           {/* Right: Content */}
           <div className="lg:col-span-3">
             {/* Section header */}
-            <div className="mb-8">
-              <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-foreground">
+            <div className="mb-10">
+              <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground font-display">
                 Who RatesQ Is For
               </h2>
             </div>
@@ -49,21 +49,21 @@ const WhoItsFor = () => {
               {audiences.map((audience, index) => (
                 <div
                   key={index}
-                  className="p-6 border border-border rounded-lg bg-background"
+                  className="p-8 border border-border rounded-xl bg-background hover:shadow-lg transition-shadow duration-300"
                 >
                   {/* Title */}
-                  <h3 className="text-lg font-semibold text-foreground mb-4">
+                  <h3 className="text-xl font-bold text-foreground mb-5 font-display">
                     {audience.title}
                   </h3>
 
                   {/* Points */}
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {audience.points.map((point, pointIndex) => (
                       <li
                         key={pointIndex}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
+                        className="flex items-start gap-3 text-base text-muted-foreground"
                       >
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                        <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
                         {point}
                       </li>
                     ))}

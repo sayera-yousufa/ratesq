@@ -22,7 +22,7 @@ const stats = [
 
 const CTA = () => {
   return (
-    <section className="py-16 lg:py-20 relative overflow-hidden">
+    <section className="py-20 lg:py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <img 
@@ -30,23 +30,23 @@ const CTA = () => {
           alt="" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[hsl(222,57%,15%)]/95" />
+        <div className="absolute inset-0 bg-[hsl(222,57%,13%)]/95" />
       </div>
 
       <div className="container max-w-7xl mx-auto px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           {/* Left: Content */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <span className="inline-block text-xs font-medium tracking-widest text-accent uppercase">
+          <div className="space-y-8">
+            <div className="space-y-5">
+              <span className="inline-block text-sm font-semibold tracking-widest text-accent uppercase">
                 Get Started
               </span>
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tight leading-tight text-[hsl(40,33%,98%)]">
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.1] text-[hsl(40,33%,98%)] font-display">
                 When you're ready,
                 <br />
                 <span className="text-accent">we're here.</span>
               </h2>
-              <p className="text-base text-[hsl(40,33%,98%)]/70 leading-relaxed max-w-md">
+              <p className="text-lg lg:text-xl text-[hsl(40,33%,98%)]/70 leading-relaxed max-w-lg">
                 Take your time exploring mortgage rate options. Access transparent information at your own pace.
               </p>
             </div>
@@ -54,27 +54,27 @@ const CTA = () => {
             <Button 
               variant="accent" 
               size="xl" 
-              className="group"
+              className="group text-lg h-16 px-10"
             >
               Explore Rates
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
 
           {/* Right: Stats */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 lg:gap-6">
             {stats.map((stat, index) => (
               <div 
                 key={index}
-                className="bg-[hsl(40,33%,98%)]/5 border border-[hsl(40,33%,98%)]/10 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:bg-[hsl(40,33%,98%)]/10 transition-all duration-300"
+                className="bg-[hsl(40,33%,98%)]/5 border border-[hsl(40,33%,98%)]/10 rounded-2xl p-6 lg:p-8 text-center backdrop-blur-sm hover:bg-[hsl(40,33%,98%)]/10 transition-all duration-300"
               >
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-accent/20 flex items-center justify-center">
-                  <stat.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent/20 flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
                 </div>
-                <p className="font-semibold text-sm text-[hsl(40,33%,98%)] mb-0.5">
+                <p className="font-bold text-base lg:text-lg text-[hsl(40,33%,98%)] mb-1 font-display">
                   {stat.label}
                 </p>
-                <p className="text-xs text-[hsl(40,33%,98%)]/50">
+                <p className="text-sm text-[hsl(40,33%,98%)]/50">
                   {stat.sublabel}
                 </p>
               </div>
