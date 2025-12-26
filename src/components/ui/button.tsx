@@ -11,14 +11,15 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-md",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-md",
-        outline: "border border-input bg-background hover:bg-muted hover:text-foreground rounded-md",
+        outline: "border-2 border-foreground/20 bg-transparent text-foreground hover:bg-foreground/10 rounded-md",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md",
         ghost: "hover:bg-muted hover:text-foreground rounded-md",
         link: "text-primary underline-offset-4 hover:underline",
         // RatesQ custom variants
         accent: "bg-accent text-accent-foreground hover:bg-accent/90 rounded-md",
         navy: "bg-[hsl(222,57%,15%)] text-[hsl(40,33%,98%)] hover:bg-[hsl(222,47%,25%)] rounded-md",
-        "navy-outline": "border-2 border-[hsl(222,57%,15%)] text-[hsl(222,57%,15%)] bg-transparent hover:bg-[hsl(222,57%,15%)] hover:text-[hsl(40,33%,98%)] rounded-md",
+        "navy-outline": "border-2 border-[hsl(222,57%,15%)] text-[hsl(222,57%,15%)] bg-[hsl(222,57%,15%)]/5 hover:bg-[hsl(222,57%,15%)] hover:text-[hsl(40,33%,98%)] rounded-md",
+        "light-outline": "border-2 border-[hsl(40,33%,98%)]/40 text-[hsl(40,33%,98%)] bg-[hsl(40,33%,98%)]/10 hover:bg-[hsl(40,33%,98%)]/20 rounded-md",
       },
       size: {
         default: "h-10 px-4 py-2",
