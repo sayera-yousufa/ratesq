@@ -20,27 +20,24 @@ const items = [
 
 const WhatWeHelp = () => {
   return (
-    <section className="py-20 lg:py-28 bg-card">
+    <section className="py-12 lg:py-16 bg-card border-t border-border">
       <div className="container max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header */}
-        <div className="mb-14 lg:mb-16">
+        <div className="mb-10">
           <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-foreground">
             What RatesQ Helps With
           </h2>
         </div>
 
-        {/* Divider */}
-        <div className="w-full h-px bg-border mb-14 lg:mb-16" />
-
         {/* Three columns */}
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {items.map((item, index) => (
-            <div key={index} className="space-y-5">
+            <div key={index} className="space-y-4">
               {/* Icon */}
               <div className="w-10 h-10 flex items-center justify-center">
                 <item.icon 
-                  className="w-6 h-6 text-foreground" 
-                  strokeWidth={1.25} 
+                  className="w-6 h-6 text-accent" 
+                  strokeWidth={1.5} 
                 />
               </div>
 
